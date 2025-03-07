@@ -1,6 +1,4 @@
-# Towards Autonomous Reinforcement Learning for Real-World Robotic Manipulation with Large Language Models
- 
-https://turcato-niccolo.github.io/papers/towardsARL/index.html
+# <a href=https://turcato-niccolo.github.io/papers/towardsARL/index.html>Towards Autonomous Reinforcement Learning for Real-World Robotic Manipulation with Large Language Models </a>
 
 Recent advancements in Large Language Models (LLMs) and Visual Language
 Models (VLMs) have significantly impacted robotics, enabling high-level
