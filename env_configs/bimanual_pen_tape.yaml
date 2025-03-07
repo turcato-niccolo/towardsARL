@@ -1,0 +1,31 @@
+objects:
+  tape:
+    load_pos: [0.51, -0.025, 0.19]
+    load_quat: [0, 0, 0, 1]
+    pos_std: 0.0
+    orient_std: 0.0
+    urdf_path: object_models/tape.urdf
+  pen:
+    load_pos: [0.515, -0.025, 0.37]
+    load_quat: [0.0, 0, 0, 1]
+    pos_std: 0.0
+    orient_std: 0.0
+    urdf_path: object_models/pen.urdf
+left_arm_joints_pos:
+  - -69.69422149658203
+  - -43.11480712890625
+  - 50.93561935424805
+  - 19.261993408203125
+  - -1.0285847187042236
+  - 41.02812576293945
+  - 179.23257446289062
+right_arm_joints_pos:
+  - 83.26000213623047
+  - -50.93212127685547
+  - -92.54700469970703
+  - -5.898693084716797
+  - 14.95194149017334
+  - 60.795623779296875
+  - 52.48333740234375
+left_gripper_state: 0.005
+right_gripper_state: 0.01

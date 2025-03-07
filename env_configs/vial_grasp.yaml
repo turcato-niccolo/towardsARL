@@ -1,0 +1,29 @@
+objects:
+  vial:
+    load_pos:
+      - 4.857331912901423632e-01
+      - -2.303118607992256026e-02
+      - 5.907549086899239327e-02
+    load_quat:
+      - 0.0099971
+      - -0.0399884
+      - 0.0064981
+      - 0.999129
+    pos_std: 0.0
+    orient_std: 0.0
+    urdf_path: object_models/vial.urdf
+  vial_carrier:
+    load_pos: [0.55, 0, 0.0025]
+    load_quat: [0, 0, 0, 1]
+    pos_std: 0.0
+    orient_std: 0.0
+    urdf_path: object_models/vial_carrier.urdf
+robot_joints_pos:
+  - -1.900638251833005388e+00
+  - -1.051285319665553830e+00
+  - 1.537881392645382039e+00
+  - 2.992670358633427452e-01
+  - 2.208951741456788298e+00
+  - 1.453440026172573729e+00
+  - 1.982158974269949248e+00
+gripper_state: 0.008

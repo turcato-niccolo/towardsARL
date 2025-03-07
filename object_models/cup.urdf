@@ -1,0 +1,244 @@
+<?xml version="1.0"?>
+<robot name="cup">
+
+  <!-- Base Link (Brick) -->
+  <link name="base_link">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+
+    <!-- Visual representation of the brick -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.12 0.12 0.005"/>
+      </geometry>
+      <material name="brick_color">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+
+    <!-- Collision representation of the brick -->
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.12 0.12 0.005"/>
+      </geometry>
+
+
+    </collision>
+
+    <!-- Inertial properties of the brick -->
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+
+  </link>
+
+
+    <link name="under_base_link">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+
+    <!-- Visual representation of the brick -->
+    <visual>
+      <origin xyz="0 0 -0.015" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.12 0.12 0.03"/>
+      </geometry>
+      <material name="brick_color">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+
+    <!-- Collision representation of the brick -->
+    <collision>
+      <origin xyz="0 0 -0.015" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.12 0.12 0.03"/>
+      </geometry>
+
+
+    </collision>
+
+    <!-- Inertial properties of the brick -->
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+
+  </link>
+
+
+   <joint name="j0" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="under_base_link"/>
+   </joint>
+
+
+    <link name="wall_1">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+
+    <!-- Visual representation of the brick -->
+    <visual>
+      <origin xyz="0.055 0 0.0225" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.12 0.045"/>
+      </geometry>
+      <material name="brick_color">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+
+    <!-- Collision representation of the brick -->
+    <collision>
+      <origin xyz="0.055 0 0.0225" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.12 0.045"/>
+      </geometry>
+    </collision>
+
+    <!-- Inertial properties of the brick -->
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+
+  </link>
+
+    <joint name="j1" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="wall_1"/>
+   </joint>
+
+
+
+    <link name="wall_2">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+
+    <!-- Visual representation of the brick -->
+    <visual>
+      <origin xyz="-0.055 0 0.0225" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.12 0.045"/>
+      </geometry>
+      <material name="brick_color">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+
+    <!-- Collision representation of the brick -->
+    <collision>
+      <origin xyz="-0.055 0 0.0225" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.12 0.045"/>
+      </geometry>
+    </collision>
+
+    <!-- Inertial properties of the brick -->
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+
+  </link>
+
+    <joint name="j2" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="wall_2"/>
+   </joint>
+
+
+    <link name="wall_3">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+
+    <!-- Visual representation of the brick -->
+    <visual>
+      <origin xyz="0 0.055 0.0225" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.12 0.01 0.045"/>
+      </geometry>
+      <material name="brick_color">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+
+    <!-- Collision representation of the brick -->
+    <collision>
+      <origin xyz="0 0.055 0.0225" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.12 0.01 0.045"/>
+      </geometry>
+    </collision>
+
+    <!-- Inertial properties of the brick -->
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.000001"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+
+  </link>
+
+    <joint name="j3" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="wall_3"/>
+   </joint>
+
+
+<link name="wall_4">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+
+    <!-- Visual representation of the brick -->
+    <visual>
+      <origin xyz="0 -0.055 0.0225" rpy=".262 0 0"/>
+      <geometry>
+        <box size="0.12 0.01 0.045"/>
+      </geometry>
+      <material name="brick_color">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+
+    <!-- Collision representation of the brick -->
+    <collision>
+      <origin xyz="0 -0.055 0.0225" rpy=".262 0 0"/>
+      <geometry>
+        <box size="0.12 0.01 0.045"/>
+      </geometry>
+    </collision>
+
+    <!-- Inertial properties of the brick -->
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.01"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+
+  </link>
+
+    <joint name="j4" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="wall_4"/>
+   </joint>
+
+</robot>

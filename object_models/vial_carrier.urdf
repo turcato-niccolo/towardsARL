@@ -1,0 +1,380 @@
+<?xml version="1.0"?>
+<robot name="vial_carrier">
+
+  <!-- Base Link (Brick) -->
+  <link name="base_link">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+
+    <!-- Visual representation of the brick -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.18 0.1 0.005"/>
+      </geometry>
+      <material name="brick_color">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+
+    <!-- Collision representation of the brick -->
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.18 0.1 0.005"/>
+      </geometry>
+
+
+    </collision>
+
+    <!-- Inertial properties of the brick -->
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="100.0"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+
+  </link>
+
+   <link name="side_nord">
+   <contact>
+      <lateral_friction value="100"/>
+   </contact>
+    <visual>
+      <origin xyz="0 0.045 0.04" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.18 0.01 0.07"/>
+      </geometry>
+      <material name="brick_color">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0.045 0.04" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.18 0.01 0.07"/>
+      </geometry>
+
+    </collision>
+
+    <!-- Inertial properties of the brick -->
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="100.0"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+
+  </link>
+
+  <joint name="j1" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="side_nord"/>
+   </joint>
+
+   <link name="side_south">
+    <contact>
+      <lateral_friction value="100"/>
+    </contact>
+    <visual>
+      <origin xyz="0 -0.045 0.04" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.18 0.01 0.07"/>
+      </geometry>
+      <material name="brick_color">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 -0.045 0.04" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.18 0.01 0.07"/>
+      </geometry>
+
+    </collision>
+
+    <!-- Inertial properties of the brick -->
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="100.0"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+
+  </link>
+
+  <joint name="j2" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="side_south"/>
+   </joint>
+
+
+   <link name="side_west">
+    <contact>
+      <lateral_friction value="100"/>
+    </contact>
+    <visual>
+      <origin xyz="-0.085 0.0 0.04" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.1 0.07"/>
+      </geometry>
+      <material name="brick_color">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="-0.085 0.0 0.04" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.1 0.07"/>
+      </geometry>
+
+    </collision>
+
+    <!-- Inertial properties of the brick -->
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="100.0"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+
+  </link>
+
+  <joint name="j3" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="side_west"/>
+   </joint>
+
+
+
+   <link name="side_east">
+    <contact>
+      <lateral_friction value="100"/>
+    </contact>
+    <visual>
+      <origin xyz="0.085 0.0 0.04" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.1 0.07"/>
+      </geometry>
+      <material name="brick_color">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0.085 0.0 0.04" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.1 0.07"/>
+      </geometry>
+
+    </collision>
+
+    <!-- Inertial properties of the brick -->
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="100.0"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+
+  </link>
+
+  <joint name="j4" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="side_east"/>
+   </joint>
+
+
+   <link name="side_internal">
+    <contact>
+      <lateral_friction value="100"/>
+    </contact>
+    <visual>
+      <origin xyz="0.0 0.0 0.04" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.1 0.07"/>
+      </geometry>
+      <material name="brick_color">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0.0 0.0 0.04" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.1 0.07"/>
+      </geometry>
+
+    </collision>
+
+    <!-- Inertial properties of the brick -->
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="100.0"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+
+  </link>
+
+  <joint name="j5" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="side_internal"/>
+   </joint>
+
+   <link name="side_east_internal">
+    <contact>
+      <lateral_friction value="100"/>
+    </contact>
+    <visual>
+      <origin xyz="0.045 0.0 0.04" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.1 0.07"/>
+      </geometry>
+      <material name="brick_color">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0.045 0.0 0.04" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.1 0.07"/>
+      </geometry>
+
+    </collision>
+
+    <!-- Inertial properties of the brick -->
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="100.0"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+
+  </link>
+
+  <joint name="j6" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="side_east_internal"/>
+   </joint>
+
+
+
+   <link name="side_west_internal">
+    <contact>
+      <lateral_friction value="100"/>
+    </contact>
+    <visual>
+      <origin xyz="-0.045 0.0 0.04" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.1 0.07"/>
+      </geometry>
+      <material name="brick_color">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="-0.045 0.0 0.04" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.01 0.1 0.07"/>
+      </geometry>
+
+    </collision>
+
+    <!-- Inertial properties of the brick -->
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="100.0"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+
+  </link>
+
+  <joint name="j7" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="side_west_internal"/>
+   </joint>
+
+
+   <link name="horizontal_separator">
+    <contact>
+      <lateral_friction value="100"/>
+    </contact>
+    <visual>
+      <origin xyz="0.0 0.0 0.04" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.18 0.02 0.07"/>
+      </geometry>
+      <material name="brick_color">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0.0 0.0 0.04" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.18 0.02 0.07"/>
+      </geometry>
+
+    </collision>
+
+    <!-- Inertial properties of the brick -->
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="100.0"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+
+  </link>
+  <joint name="j8" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="horizontal_separator"/>
+  </joint>
+
+  <link name="height_box">
+    <contact>
+      <lateral_friction value="100"/>
+    </contact>
+    <visual>
+      <origin xyz="0.0 0.0 0.01" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.18 0.1 0.02"/>
+      </geometry>
+      <material name="brick_color">
+        <color rgba="1.0 1.0 1.0 1.0"/>
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0.0 0.0 0.01" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.18 0.1 0.02"/>
+      </geometry>
+
+    </collision>
+
+    <!-- Inertial properties of the brick -->
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="100.0"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+
+  </link>
+
+  <joint name="j12" type="fixed">
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="height_box"/>
+   </joint>
+
+
+</robot>

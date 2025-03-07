@@ -1,0 +1,22 @@
+objects:
+  vial:
+    load_pos: [0.57, 0.16 , 0.18]
+    load_quat: [ 0, 0, 0, 1]
+    pos_std: 0.0
+    orient_std: 0.0
+    urdf_path: object_models/vial.urdf
+  centrifuge:
+    load_pos: [0.55, 0.154, 0.0025]
+    load_quat: [0, 0, 0, 1]
+    pos_std: 0.0
+    orient_std: 0.0
+    urdf_path: object_models/centrifuge.urdf
+robot_joints_pos: 
+  - -80.42121124267578
+  - -49.089500427246094
+  - 55.16315460205078
+  - 5.810222148895264
+  - 99.86760711669922
+  - 85.3924560546875
+  - 56.671024322509766
+gripper_state: 0.008

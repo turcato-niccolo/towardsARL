@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<robot name="centrifuge">
+
+  <!-- Base Link  -->
+  <link name="base_link">
+  <contact>
+      <lateral_friction value="1"/>
+  </contact>
+
+    <!-- Visual representation of the brick -->
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.029 0.49 0.048"/>
+      </geometry>
+      <material name="red">
+        <color rgba="1.0 0.0 0.0 1.0"/>
+      </material>
+    </visual>
+
+    <!-- Collision representation of the brick -->
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <box size="0.029 0.49 0.048"/>
+      </geometry>
+
+
+    </collision>
+
+    <!-- Inertial properties of the base -->
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="0.05"/>
+      <inertia ixx="0.001" ixy="0.0" ixz="0.0" iyy="0.001" iyz="0.0" izz="0.001"/>
+    </inertial>
+
+  </link>
+
+
+</robot>

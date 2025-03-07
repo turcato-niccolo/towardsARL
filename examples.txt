@@ -1,0 +1,38 @@
+## Reward function and termination condition for picking a cube object
+
+def reward_fun(self, observation, action):
+    reward = 0.0
+    rewards_dict = {}  # Defines the reward components
+
+    cube_pose = np.array(sim_utils.getObjPose(self.cube_id))
+    # info = self._get_info()
+    end_effector_left_pose = np.array(sim_utils.getLinkPose(self.robot_id, self.end_effector_left_idx))
+
+    distance = np.linalg.norm(np.array(cube_pose[:3]) - np.array(end_effector_left_pose[:3]))
+
+    finger_1, finger_2, total_contact_force = self.check_fingers_touching(self.cube_id)
+
+    rewards_dict = {
+        "distance_to_cube_reward": -distance,  # encourage getting close to the target cube
+        "finger_contacts_reward":  1 * finger_1 + 1 * finger_2,  # encourage interaction with the target cube
+        "cube_height_reward": 1000 * (cube_pose[2] - 0.02)
+    }
+
+    total_bonuses = sum([rewards_dict[k] if rewards_dict[k] > 0 else 0 for k in rewards_dict.keys()])
+    total_bonuses = total_bonuses if total_bonuses > 0 else 1
+    info = self._get_info()
+    total_shaping = sum([rewards_dict[k] for k in rewards_dict.keys()])
+    task_solved_reward = self._max_episode_steps * total_bonuses * info['task_solved']
+
+    reward = total_shaping + task_solved_reward
+
+    rewards_dict['task_solved_reward'] = task_solved_reward
+
+    return reward, rewards_dict
+
+def _get_info(self):
+    cube_pose = sim_utils.getObjPose(self.cube_id)
+    return {'task_solved': cube_pose[2] > 0.1}
+
+####################################################################################################    
+####################################################################################################

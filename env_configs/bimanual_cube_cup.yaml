@@ -1,0 +1,31 @@
+objects:
+  cube:
+    load_pos: [0.545, 0.155, 0.235]
+    load_quat: [0.0, 0, 0, 1]
+    pos_std: 0.0
+    orient_std: 0.0
+    urdf_path: object_models/cube_small.urdf
+  cup:
+    load_pos: [ 0.55, -0.12, 0.19]
+    load_quat: [ -0.1306256, 0, 0, 0.9914318]
+    pos_std: 0.0
+    orient_std: 0.0
+    urdf_path: object_models/cup.urdf
+left_arm_joints_pos:
+  - -71.44192504882812
+  - -49.13234329223633
+  - 48.820587158203125
+  - 14.924369812011719
+  - 94.99537658691406
+  - 84.40956115722656
+  - 137.7278289794922
+right_arm_joints_pos:
+  - 76.9078140258789
+  - -42.84052658081055
+  - -66.10972595214844
+  - 4.521728515625
+  - 83.59478759765625
+  - -61.5429573059082
+  - -45.0
+left_gripper_state: 0.012
+right_gripper_state: 0.005

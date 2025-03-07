@@ -1,0 +1,26 @@
+objects:
+  blue_cube:
+    load_pos:
+     - 0.492
+     - 0.0832282365
+     - 0.146841436
+    load_quat: [-0.0657347, 0.2749787, -0.2230166, 0.9329144 ]
+    orient_std: 0.0
+    pos_std: 0.0
+    urdf_path: object_models/cube_small.urdf
+  red_cube:
+    load_pos:
+    - 0.58833315
+    - 0.06057621
+    - 0.09636923
+    load_quat:
+    - 0
+    - 0
+    - 0
+    - 1
+    orient_std: 0.0
+    pos_std: 0.0
+    urdf_path: object_models/cube_small.urdf
+plane_height: 0.08328703022528061
+robot_joints_pos: [-2.2950320257129855, -0.3584719440672826, 2.255938506017325, -0.0350940941804083, -4.862609367452949, 1.581247092674822, 2.6273401415903805]
+gripper_state: 0.012
